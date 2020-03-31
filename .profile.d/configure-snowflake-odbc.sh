@@ -3,12 +3,16 @@
 export ODBCSYSINI=${HOME}/.apt/usr/lib/snowflake/odbc/conf/
 
 mkdir -p /etc
-echo "[snowflake]
-Description=SnowflakeDB
+echo "
+[ODBC Data Sources]
+SnowflakeDSII = Snowflake
+
+[SnowflakeDSII]
+Server = ${SNOWFLAKE_SERVER}
+Warehouse = ${SNOWFLAKE_WAREHOUSE}
 Driver=SnowflakeDSIIDriver
-Locale=en-US
-SERVER=${SNOWFLAKE_ACCOUNT}.snowflakecomputing.com
-PORT=443
-SSL=on
-CLIENT_SESSION_KEEP_ALIVE=true
+Description = SnowflakeDSII
+Locale = en-US
+Tracing = 0
+Role = READ_ONLY
 " > ${ODBCSYSINI}/odbc.ini
