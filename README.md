@@ -9,7 +9,7 @@ it, with the following in the Aptfile:
 ```
 unix-odbc
 unixodbc-dev <-- required for ruby-odbc gem
-https://raw.githubusercontent.com/drivy/heroku-buildpack-snowflake-odbc/master/snowflake-odbc-2.16.10.x86_64.deb
+https://raw.githubusercontent.com/drivy/heroku-buildpack-snowflake-odbc/master/snowflake-odbc-2.25.4.x86_64.deb
 ```
 
 Add buildpacks
